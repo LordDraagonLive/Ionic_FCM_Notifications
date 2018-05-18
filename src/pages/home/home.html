@@ -1,14 +1,83 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Leak Page
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <!-- <ion-buttons left> -->
+  <button ion-button full round class="redClass bottomMargin button" (tap)="callBtnAction()"><ion-icon name="call" class="ionIconMarg2"></ion-icon> Call Fire Dept.</button>
+  <button ion-button full round class="redClass bottomMargin button" (tap)="stopAlarmAction()"><ion-icon name="close-circle" class="ionIcon"></ion-icon>Stop Alarm</button>
+  <button ion-button full round class="normalClass button"><ion-icon name="exit" class="ionIcon" (tap)="goToOverview()"></ion-icon>Ignore Alert</button>
+
+  <ion-item-divider class="noTopPadMargin">
+  </ion-item-divider>
+
+  <ion-card>
+      <ion-card-header>
+        <b>Data which triggered the alarm:</b>
+      </ion-card-header>
+  
+      <ion-row>
+        <ion-col>
+          <p>
+            Gas Level: 
+          </p>
+        </ion-col>
+        <ion-col>
+            <p>{{gasData}} ppm</p>
+        </ion-col>
+        </ion-row>
+  
+            <ion-row>
+                <ion-col>
+                  <p>
+                    LPG Level: 
+                  </p>
+                </ion-col>
+                <ion-col>
+                    <p>{{lpgData}} ppm</p>
+                </ion-col>
+                </ion-row>
+                    <ion-row>
+                        <ion-col>
+                          <p>
+                            Smoke Level: 
+                          </p>
+                        </ion-col>
+                        <ion-col>
+                            <p>{{smokeData}} ppm</p>
+                        </ion-col>
+                        </ion-row>
+  
+                <ion-row>
+        <ion-col>
+          <p>
+            Humidity:
+          </p>
+        </ion-col>
+        <ion-col>
+            <p>{{humidityData}} %</p>
+        </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col>
+          <p>
+            Temperature:
+          </p>
+  
+        </ion-col>
+        <ion-col>
+            <p>{{tempData}} °C</p>
+        </ion-col>
+      </ion-row>
+      
+    </ion-card>
+
+    <button ion-button full class="bottomMargin smallBtn"> View Live Data</button>
+
+
+ 
 </ion-content>

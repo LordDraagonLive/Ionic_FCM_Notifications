@@ -1,3 +1,41 @@
 page-home {
 
 }
+
+
+.button{
+    // font-size: 8px!important;
+    height: 4em!important;
+    // border-radius: 10%!important;
+    // margin-bottom: 12px !important;
+
+}
+
+.redClass{
+    background-color: firebrick;
+}
+
+.normalClass{
+    background-color: forestgreen;
+}
+
+.bottomMargin{
+    margin-bottom: 12px !important;
+}
+
+.noTopPadMargin{
+    margin-top: 0px;
+    padding-top: 0px
+}
+
+.ionIcon{
+    margin-right: 2em;
+}
+
+.ionIconMarg2{
+    margin-right: 1em;
+}
+
+.smallBtn{
+    height: 2em!important;
+}
